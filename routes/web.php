@@ -14,5 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return ['NIS' => '3103118091',
+    'Nama' => 'Mohammad Ariq Maulana Ibrahim',
+    'Gender' => 'Laki-Laki',
+    'Phone' => '082136315004',
+    'Class' => 'XII RPL 3'];
 });
+
+Route::get('auth','AuthController@me');
