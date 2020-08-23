@@ -20,7 +20,7 @@ class BookController extends Controller
 
     /**
      * Store a newly created resource in storage.
-     *
+     *   
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
@@ -29,7 +29,7 @@ class BookController extends Controller
         //
         return Book::create([
             "title" => $request->input('title'),
-            "descrption" => $request->input('description'),
+            "description" => $request->input('description'),
             "author" => $request->input('author'),
             "publisher" => $request->input('publisher'),
             "date_of_issue" => $request->input('date_of_issue')
