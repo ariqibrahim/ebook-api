@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Author;
 
 class AuthorController extends Controller
 {
@@ -15,7 +14,6 @@ class AuthorController extends Controller
     public function index()
     {
         //
-        return Author::get();
     }
 
     /**
@@ -37,14 +35,6 @@ class AuthorController extends Controller
     public function store(Request $request)
     {
         //
-        return Author::create([
-            "name" => $request->input('name'),
-            "date_of_birth" => $request->input('date_of_birth'),
-            "place_of_birth" => $request->input('place_of_birth'),
-            "gender" => $request->input('gender'),
-            "email" => $request->input('email'),
-            "hp" => $request->input('hp')
-        ]);
     }
 
     /**
@@ -56,7 +46,6 @@ class AuthorController extends Controller
     public function show($id)
     {
         //
-        return Author::find($id);
     }
 
     /**
@@ -79,14 +68,7 @@ class AuthorController extends Controller
      */
     public function update(Request $request, $id)
     {
-        return Author::find($id)->update([
-            "name" => $request->input('name'),
-            "date_of_birth" => $request->input('date_of_birth'),
-            "place_of_birth" => $request->input('place_of_birth'),
-            "gender" => $request->input('gender'),
-            "email" => $request->input('email'),
-            "hp" => $request->input('hp')
-        ]);
+        //
     }
 
     /**
@@ -97,6 +79,6 @@ class AuthorController extends Controller
      */
     public function destroy($id)
     {
-        return Author::destroy($id);
+        //
     }
 }
